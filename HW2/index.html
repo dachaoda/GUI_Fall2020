@@ -1,0 +1,145 @@
+<!--
+ File: cs.uml.edu/~dkuang/index.html
+ 91.461 Assignment: Creating Your First Web Page
+ Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
+ Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
+ copied or excerpted for educational purposes with credit to the author.
+ updated by DK on September 22, 2020 at 9:23 PM
+
+ Decription: This webspage is contained an index of assignments completed in fall 2020 
+ for 91.461 GUI Programming I. This page features a short summary of each assignment and
+ navigation on the left for quick redirect to a specific assignment. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/index.css">
+        <title>
+            Home
+        </title>
+    </head>
+    
+    <body>
+        <div id="container">
+            <!--
+                id ="container" sepcfices the unqiue id "container" for this specific 
+                element.
+                All contents is contained within the "container" div for 
+                purpose of testing, and code clarity.
+            -->
+
+            <div id="banner">
+                <!--
+                    The "banner" div should contain all elements that would appear
+                     on the very top of the site. Currently, it only a heading with
+                     a welcome message. 
+                -->
+                
+                <h1>
+                    Welcome to My Page
+                </h1>
+
+            </div>
+
+            
+            <div id="nav_left">
+                <!--
+                    The "nav_left" div serve as a navigation menu, and
+                    contains a unorder list of links for quickly 
+                    navigating any completed and future assignments. 
+                -->
+
+                <ul>
+                    <!--
+                    This unorder list currently only have HW2 point to a real link 
+                    by file name. HW3 contains a placeholder link that should change the url, 
+                    but remain same page when cicked.
+                    -->
+
+                    <li><a href="index.html">HW2</a></li>
+                    <li><a href="#HW3">HW3</a></li>
+
+                </ul>
+
+            </div>
+
+
+            <div id="content">
+                <!--
+                    The "content" div serve as a container where the main content
+                    of this page resides. Currently, this div contained a quick index summary,
+                    and a introduction. 
+                -->
+
+                <h2>
+                    Introduction
+                </h2>
+
+                <br>
+
+                <p>
+                    This page is dedicated as an assignment index for 91.61 GUI Programming 
+                    I during fall 2020. You can find a quick summary of each available 
+                    assignment below or quickly jump to the assignment using links on the 
+                    left.
+                </p>
+                <!--
+                    A simple introduction to the purpose of this page using a level 2 heading 
+                    a paragraph element.
+                -->
+
+
+                <br>
+                <hr>
+                <br>
+                <!--
+                    The br/hr/br combo creates a div between contents and a newline before
+                    and after for spacing purposes.
+                -->
+
+                <h2>
+                    Index
+                </h2>
+
+                <br>
+
+                <p>
+                    <b>HW2: First Web Page</b> 
+                    <br>
+                    <!--
+                    Using <b> tag to bold text without the use of header tags and a <br> for newline spacing. 
+                    -->
+                    The goal of this assignment is to create a index website for future assignments.
+                </p>
+                
+            </div>
+
+            <div id="footer">
+                <!--
+                    The "footer" div serve as a container for copyright and certifcations.
+                -->
+
+                Copyright &copy; 2020 by Dachao Kuang
+                <!--
+                    The "&copy" is used to display the copyright symbol. 
+                -->
+
+                <p>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                            alt="Valid CSS!" />
+                        </a>
+                </p>
+                <!--
+                    The css validator code below is provided throught the
+                    validation services provided at http://jigsaw.w3.org/css-validator/#validate_by_upload.
+                -->
+                            
+            </div>
+        </div>
+    
+    </body>
+</html>

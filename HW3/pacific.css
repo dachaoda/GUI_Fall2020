@@ -1,0 +1,173 @@
+/*
+ File: cs.uml.edu/~dkuang/HW3/pacific.css
+ 91.461 Assignment: Style a Site with External CSS
+ Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
+ Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
+ copied or excerpted for educational purposes with credit to the author.
+ updated by DK on September 29, 2020 at 12:50 PM
+
+ Decription: The followiung css styling is a attempted at recreating of 
+ the Pacific Trail Resort webpage in accordance to screenshot provide in 
+ HW3_read folder.  
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background-color: #00569f;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	background-size: cover;
+	background-image: linear-gradient(to bottom, white, #00569f 80%);
+	/*
+	The linear-gradient sets a a gradient from top (white color) to bottom
+	( #00569f color) across only 80% of vh. Doing this allows the bottom 20% to
+	be solid a #00569f color.
+	*/
+}
+
+#wrapper{
+	width: 80vw;
+	background-color: black;
+	min-width: 600px;
+	margin: auto;
+	/*
+	margin auto is used for dynamical center depending on widnow size
+	*/
+	grid-template-columns: 200px auto;
+	grid-template-rows: 72px auto 10%;
+	display: grid;
+	/*
+	Grid template is used to setup a gird layout. The auto at area where 'content' should reside.
+	Doing this allows elements bordering 'content' to scale according to content's dimension as it
+	dynamically adjust to fit it's content.  
+	*/
+}
+
+
+header{
+	width: 100%;
+	color: white;
+	line-height: 10px;
+	background-color: #000032;
+	background-image: url("sunset.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	/*
+	The background is set to no repeat so it doesn't cover the entire space 
+	and position set to right in order for it to stay on the rightside.
+	This make sunset.jpg only take a small portion of header on the right, and the rest is
+	filled in by background color.
+	*/
+	grid-column: 1 / 3;
+	grid-row: 1/ 2;
+	display: grid;
+	/*
+	Postioned header on the top of all element in grid like like a banner.
+	*/
+}
+
+nav{
+	width: 200px;
+	background-color: #90c7e3;
+	grid-column: 1 / 2;
+	grid-row: 2/ 4;
+	display: grid;
+	/*
+	Postioned nav below header, and cover the left side of content and footer.
+	*/
+}
+
+nav ul {
+	list-style-type: none;
+	font-size: 1.2em;
+	padding: 20px;
+	padding-top: 15px;
+	padding-right: 30px;
+	text-align: left;
+	margin: 0;
+}
+
+nav ul a{
+	color: #000032;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+#content{
+	background-color: white;
+	padding-left: 30px;
+	padding-bottom: 45px;
+	padding-right: 15px;
+}
+
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+}
+
+h2 {
+	color: #3399CC;
+}
+
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#contact {
+	font-size: 90%;
+}
+dt {
+	color: #000033;
+}
+
+#content .resort{
+	color: #478cbd;
+	font-weight: bold;
+
+}
+
+#content img{
+	float: left;
+	padding-right: 15px;
+	/*
+	The float on img allows it to float ontop of 'p', this result in
+	text in p push to the right of 'img' like it's wrapping 'img'. 
+	The padding is just for readability between text and image 
+	*/
+
+}
+
+#content ul{
+	list-style-image: url("marker.gif");
+	list-style-position: inside;
+	/*
+	This styling changes the default list style of dots to the our marker.gif.
+	The style postion make sure it aligns properly with the pervious text.
+	*/
+}
+
+
+
+footer {
+	font-size: 80%;
+	padding-left: 30px;
+	background-color: white;
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+}
+

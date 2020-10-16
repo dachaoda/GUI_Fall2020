@@ -1,0 +1,161 @@
+/*
+ File: /cs.uml.edu/~dkuang/index.css
+ 91.461 Assignment: Styling Your First Web Page With CSS
+ Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
+ Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
+ copied or excerpted for educational purposes with credit to the author.
+ updated by DK on September 22, 2020 at 9:23 PM
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    /*
+    In order to prevent inconsistency of default value due to browser.
+    I used the universal selector and setting margin and padding to set
+    the 0 as the default value for all elements. 
+    */
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: magenta;
+    display: block;
+    /*
+    Container uses view weight and height to dynamically adjust to the size
+    of the brower size. This also allows elements within the container div to
+    use proper scale to window size as well.
+    */
+}
+
+#banner {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 2px white solid;
+    background-color: black;
+    background-image: linear-gradient(to left, white, black);
+    /*
+    banner width scales to fit container width. line-height is set to equal to height in order
+    to center the text vertically, with horizontal alignment handle by text-align. Border is added
+    to clear divid contents. The background-image is just a gradient of the white color beginging on the right side
+    of banner slowly changing to black the further right it goes.
+    */
+}
+
+#nav_left {
+    width: 15%;
+    height: 90vh;
+    background-color: black;
+    border-right: 2px white solid;
+    float: left;
+    box-sizing: border-box;
+    /*
+    nav_left uses border-box box-sizing to prevent increase width and height of nav_left due  
+    to additional pixel added by border. Float left allows nav_left to be next to the content 
+    element with pushing it below nav_left.
+    */
+}
+
+#nav_left li {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    /*
+    margin-top is added to provide spacing between each list item, and width of a 100% to 
+    scale to the width of nav_left. 
+    */
+}
+
+#nav_left li a{
+    line-height: 30px;
+    text-align: center;
+    list-style: none;
+    background-color: black;
+    border: 2px solid magenta;
+    border-radius: 9px;
+    box-sizing: border-box;
+    font-weight: bold;
+    display: block;
+    /*
+    list-style is set to none in order to remove the list decoration like dots that appear 
+    to the left of each <li>. Display block here is used so <a> element scale to the sizes of <li>.
+    without that <a> will only scale to the size of the text and make the clickable area too small.
+    border-radius changes the sharpe 90 degree angles to have a curve instead.
+    */
+}
+
+#nav_left a:hover{
+    color: black;
+    background-color: white;
+    box-sizing: border-box;
+    transition: 2s;
+    /*
+    Using :hover whenever the user's mouse hovers over the link it will change it's
+    css attributes to what is list above and transition:2s; make sure that the transition
+    of the style will have a duration of 2s before it's fully changed.
+    */
+}
+
+#nav_left a{
+    text-decoration: none;
+    color: inherit;
+    /*
+    This text-decoration:none; and color inherit; removes the underline and darken bluish text color 
+    that is default in text with embedded link and using the self default color of megenta.
+    */
+}
+
+#content {
+    width: 85%;
+    height: 90%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    /*
+    content float to the left to align side by side with nav_left. Padding of 10px is adding between element and content div
+    in order to create space away from the border and prevent text sticking next to the white border on the left and above content.
+    */
+}
+
+#content p{
+    color: white;
+    font-style: italic;
+    /*
+    general styling for all paragraph in content to have white text color and italics.
+    */
+}
+
+#content p:first-of-type{
+    color: violet;
+    font-size: 1.2em;
+    font-style: normal;
+    /*
+    Using first-of-type we isolate the first <p> in content. Since this the introdution text I change the color to violet, and 
+    increase the font size to emphasize it's important over the rest text in content. Font-style is set to normal in order to 
+    overwrite the italic styling. 
+    */
+}
+
+
+#footer {
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    line-height: 2em;
+    text-align: center;
+    color: red;
+    border-top: 2px white solid;
+    float: left;
+    /*
+    Footer's height is set to fit-content to accuratly contain the css validation icons.
+    As the icon is provided by a third party, fit-content is a fail safe in case it's not load or a
+    unexpected size change occurs. And because height is not a static value, in order to accuratly 
+    center the footer text the vaule of line-height was set at 2em after trials and error for what looks
+    center to the naked eye.
+    */
+}
