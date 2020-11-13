@@ -57,27 +57,27 @@ $(document).ready(function() {
         messages: {
             Minimum_CV: {
                 required:'Empty Value! Please input a minimum column value',
-                number: 'Invalid Number! Please input an integer value',
-                range: 'Invalid Range! Please enter a value between -100 and 100',
+                number: 'Invalid Number! Please input an integer value for minimum column',
+                range: 'Invalid Range! Please enter a value between -100 and 100 for minimum column',
                 moreThan: 'Invalid Range! Please enter a Minimum column value is smaller than Maximum colume value'
             },
             Maximum_CV: {
                 required:'Empty Value! Please input a maximum column value',
-                number: 'Invalid Number! Please input an integer value',
-                range: 'Invalid Range! Please enter a value between -100 and 100',
+                number: 'Invalid Number! Please input an integer value for maximum column',
+                range: 'Invalid Range! Please enter a value between -100 and 100 for maximum column',
                 lessThan: 'Invalid Range! Enter a Maximum column value is bigger than Maximum colume value'
             },
             Minimum_RV: {
-                required:'Empty Value! Please input a minimum row  value',
-                number: 'Invalid Number! Please input an integer value',
-                range: 'Invalid Range! Please enter a value between -100 and 100',
+                required:'Empty Value! Please input a minimum row value',
+                number: 'Invalid Number! Please input an integer value for minimum row ',
+                range: 'Invalid Range! Please enter a value between -100 and 100 for minimum row',
                 moreThan: 'Invalid Range! Enter a Minimum row value is smaller than Maximum row value'
 
             },
             Maximum_RV: {
                 required:'Empty Value! Please input a maximum row value',
-                number: 'Invalid Number! Please input an integer value',
-                range: 'Invalid Range! Please enter a value between -100 and 100',
+                number: 'Invalid Number! Please input an integer value for maximum row',
+                range: 'Invalid Range! Please enter a value between -100 and 100 for maximum row',
                 lessThan: 'Invalid Range! Enter a Maximum row value is bigger than Maximum row value'
             },
         },
@@ -85,22 +85,22 @@ $(document).ready(function() {
         errorPlacement: function(error, element){
             if(element.attr("name") == "Minimum_CV"){
 
-                error.addClass("col-md-12 text-right text-danger")
+                error.addClass("col-md-12 text-danger")
                 error.insertBefore($("#Maximum_CV_L"));
 
             }else if(element.attr("name") == "Maximum_CV"){
 
-                error.addClass("col-md-12 text-right text-danger")
+                error.addClass("col-md-12  text-danger")
                 error.insertBefore($("#Minimum_RV_L"));
 
             }else if(element.attr("name") == "Minimum_RV"){
 
-                error.addClass("col-md-12 text-right text-danger")
+                error.addClass("col-md-12  text-danger")
                 error.insertBefore($("#Maximum_RV_L"));
 
             }else if(element.attr("name") == "Maximum_RV"){
 
-                error.addClass("col-md-12 text-right text-danger")
+                error.addClass("col-md-12  text-danger")
                 error.insertBefore($("#Submit"));
 
             }else{
