@@ -1,5 +1,5 @@
  /***************************************************************************
- File: https://dachaoda.github.io/GUI_Fall2020/HW5/readme.txt
+ File: https://dachaoda.github.io/GUI_Fall2020/HW6/readme.txt
  91.461 Assignment: Using the jQuery Validation Plugin with Your Dynamic Table
  Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
  Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
@@ -8,7 +8,7 @@
  ***************************************************************************/
 
 Name: Dachao Kuang
-Assignment: HW4
+Assignment: HW6
 
-Site URL: https://dachaoda.github.io/GUI_Fall2020/HW6/index.html
+Site URL: https://dachaoda.github.io/GUI_Fall2020/HW6/index
 Github Repo: https://github.com/dachaoda/GUI_Fall2020/tree/main/HW6
