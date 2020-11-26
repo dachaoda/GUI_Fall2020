@@ -123,7 +123,7 @@ function test() {
 
 //Builds the tabel
 function Build_Table() {
-    $( "#tableBox" ).tabs();
+    $("#tableBox").tabs();
     var element = document.getElementById("Table");
     element.innerHTML = ""
     for (i = Minimum_RV; i <= Maximum_RV; i++) {
@@ -181,8 +181,12 @@ function check_Value() {
 }
 
 function Build_Tab() {
+    //error check
     limit_tabs();
-    $( "#tableBox" ).tabs();
+    //init tabs function
+    $("#tableBox").tabs();
+
+    //Create Tab labels
     idnumber = idnumber + 1;
     var tableBox = document.getElementById("tableBox")
     var tab_label = document.getElementById("tab_label");
@@ -190,30 +194,36 @@ function Build_Tab() {
     var label_link = document.createElement('a');
     var check_box = document.createElement('input');
 
+    //Create Tab labels attributes and classes
     check_box.setAttribute("class", "form-check-inline mt-2 delete_check");
     check_box.setAttribute("type", "checkbox");
     check_box.setAttribute("name", parseInt(idnumber));
+    label_link.innerHTML = Minimum_CV.toString() + ', ' + Maximum_CV.toString() + ', ' + Minimum_RV.toString() + ', ' + Maximum_RV.toString();
+    label_link.setAttribute("href", "#testtab" + idnumber.toString());
+    label_list.setAttribute("id", "listtab" + idnumber.toString());
 
-    label_link.innerHTML = Minimum_CV.toString() +', ' + Maximum_CV.toString() +', ' +  Minimum_RV.toString() +', ' +  Maximum_RV.toString();
-    label_link.setAttribute("href", "#testtab" + idnumber.toString()); 
-    label_list.setAttribute("id", "listtab" + idnumber.toString())
+    //Add Tab to existing list
     label_list.appendChild(label_link);
     label_list.appendChild(check_box);
     tab_label.appendChild(label_list);
 
+    //Create Tab Table 
     var div = document.createElement('div');
     var table = document.createElement('table');
     table.setAttribute('id', 'testtable' + idnumber.toString());
     table.setAttribute('class', 'col-md-12')
     div.setAttribute('id', 'testtab' + idnumber.toString());
+
+    //Add Tabel to html
     div.appendChild(table);
     tableBox.appendChild(div);
     Build_Tab_Table("testtable" + idnumber.toString());
-    $("#tableBox" ).tabs("refresh");
+    $("#tableBox").tabs("refresh");
     tabnumber = tabnumber + 1;
     return;
 }
 
+//same function as Build_Table except it accepts an element id
 function Build_Tab_Table(table_id) {
     var element = document.getElementById(table_id);
     element.innerHTML = ""
@@ -250,26 +260,34 @@ function Build_Tab_Table(table_id) {
     return;
 }
 
-function delete_tab(){
-    $('.delete_check:checkbox:checked').each(function() {
+// Delete all checked tabs
+function delete_tab() {
+    $('.delete_check:checkbox:checked').each(function () {
+        //find name of tab
         var checkedValue = $(this).attr('name');
-        console.log(checkedValue);
+
+        //Generate id for tabs and tables to delete
         var tab_id = 'testtab' + checkedValue;
         var list_id = 'listtab' + checkedValue;
-        console.log(tab_id);
-        console.log(list_id);
+
+        //delete the tab and table
         var delete_tab = document.getElementById(tab_id);
         var delete_list = document.getElementById(list_id);
         delete_tab.remove();
         delete_list.remove();
+
+        //update count of tabs
         tabnumber = tabnumber - 1;
+
+        //reset error message
         var element = document.getElementById("Error");
         element.innerHTML = '';
     });
 }
 
-function limit_tabs(){
-    if (tabnumber == 14 ) {
+// Checks if user has already have 14 tabs generated
+function limit_tabs() {
+    if (tabnumber == 14) {
         var element = document.getElementById("Error");
         element.innerHTML = 'You have reached the limit of 14 tabs. Please delete some before creating more tables.';
         exit();
