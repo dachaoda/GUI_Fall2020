@@ -1,0 +1,123 @@
+<!--
+ File: https://dachaoda.github.io/GUI_Fall2020/HW7/index.html
+ 91.461 Assignment: Using the jQuery UI Slider and Tab Widgets
+ Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
+ Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
+ copied or excerpted for educational purposes with credit to the author.
+ updated by DK on November 25, 2020 at 10:26 PM
+
+ Decription: This webspage is bootstrap version 4.5.3. The purpose of the site is to
+ create a dynamic multiplication table generator using user input for a form.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="JS/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="JS/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="JS/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <title>
+        Interactive Dynamic Table
+    </title>
+
+</head>
+
+<body>
+    <div id="Banner" class=" pt-3 pb-1 container-fluid text-primary bg-light">
+
+        <h2>
+            Interactive Dynamic Multiplication Table Generator
+            <br>
+            <h6 class="mb-5"> Generate a tabel with between the range of -100 to 100</h6>
+        </h2>
+
+    </div>
+
+    <div class="container mx-0 text-info ">
+        <div class="row">
+            <div id="Form" class="col-md-12 mx-3">
+
+                <!-- -->
+                <form class="form-row" id ="RangeForm">
+
+                    <h5 class="col-md-12 text-center">Please enter table ranges</h5>
+                    <h6 id="Output" class="col-md-12 m-0 "> &ThinSpace; </h6>
+
+                    <label class="col-md-6 col-form-label text-right" for="Minimum_CV" id="Minimum_CV_L">Minimum Column
+                        Value</label>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="Minimum_CV" name="Minimum_CV" value="1">
+                    </div>
+
+                    <div id="Minimum_CV_slider" class=" col-md-7 offset-3 mb-4">
+                    </div>
+
+                    <label class="col-md-6 col-form-label text-right" for="Maximum_CV" id="Maximum_CV_L">Maximum Column
+                        Value</label>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="Maximum_CV" name="Maximum_CV" value="10">
+                    </div>
+
+                    <div id="Maximum_CV_slider" class=" col-md-7 offset-3 mb-4">
+                    </div>
+
+                    <label class="col-md-6 col-form-label text-right" for="Minimum_RV" id="Minimum_RV_L">Minimum Row
+                        Value</label>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="Minimum_RV" name="Minimum_RV" value="1">
+                    </div>
+
+                    <div id="Minimum_RV_slider" class=" col-md-7 offset-3 mb-4">
+                    </div>
+                    
+                    <label class="col-md-6 col-form-label text-right" for="Maximum_RV" id="Maximum_RV_L">Maximum Row
+                        Value</label>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="Maximum_RV" name="Maximum_RV" value="10">
+                    </div>
+
+                    <div id="Maximum_RV_slider" class=" col-md-7 offset-3 mb-4">
+                    </div>
+                    
+                    <input class=" offset-md-3 mt-4" type="button" onclick="" value="Generate Table" name="Submit" id="Submit">
+
+                    <input class=" offset-md-4 mt-4" type="button" onclick="delete_tab()" value="Delete Tab" name="Delete" id="Delete">
+                    
+                    <h6 id="Error" class="col-md-12 m-0 mt-2 mb-2"></h6>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="tableBox" class="container overflow-auto m-3 b">
+        
+        <ul id="tab_label" class="row px-5">
+            <li id="listtab1"><a href="#testtab1" >1, 10, 1, 10</a><input class="form-check-inline mt-2 delete_check" type="checkbox" name="1"></li>
+        </ul>
+        <div id="testtab1">
+            <table id="Table" class="col-md-12">
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/jquery.validate.js"> </script>
+    <script type="text/javascript" src="JS/jquery-ui-1.12.1.custom/jquery-ui.min.js"> </script>
+    <script type="text/javascript" src="JS/slider.js"> </script>
+    <script type="text/javascript" src="JS/rules.js"> </script>
+    <script type="text/javascript" src="JS/script.js"> </script>
+
+
+</body>
+
+</html>

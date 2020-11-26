@@ -1,0 +1,63 @@
+/*
+ File: https://dachaoda.github.io/GUI_Fall2020/HW7/index.html
+ 91.461 Assignment: Using the jQuery UI Slider and Tab Widgets
+ Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
+ Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
+ copied or excerpted for educational purposes with credit to the author.
+ updated by DK on November 25, 2020 at 10:26 PM
+
+ Decription: This css is meanly for styling the table generated from user input.
+*/
+
+#Form {
+    border: teal 2px solid;
+}
+
+#tableBox {
+    border: teal 2px solid;
+}
+
+table {
+    width: max-content;
+}
+
+th,
+td {
+    border: solid black 1px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 5px;
+    min-width: 35px;
+    padding: 5px;
+}
+
+table tr th {
+    background-color: black;
+    color: white;
+    border: white solid 1px;
+
+}
+
+table tr:nth-child(odd) th:nth-child(odd) {
+    background-color: tomato;
+    color: black;
+    border: white solid 1px;
+}
+
+div table tr:first-child th:first-child {
+    border: none;
+    background-color: transparent;
+}
+
+#Error {
+    color: red;
+    text-align: center;
+}
+
+td:hover {
+    transition: 1s;
+    color: yellow;
+    background-color: black;
+}
