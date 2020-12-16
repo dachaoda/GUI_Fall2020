@@ -189,7 +189,10 @@ function findScore(tileV, boardP){
     }else if(boardP == 7 || boardP == 9){
         tileV = tileV * 2;
     }
+    console.log(tileV);
+    console.log(score);
     score = score + tileV;
+    console.log(score)
 
 }
 
@@ -197,9 +200,10 @@ function findScore(tileV, boardP){
 function updateScore(){
     //word bonus are applied
     if(Wbonus == 0){
-        TotalScore = score;
+        TotalScore = TotalScore + score;
     }else{
-        TotalScore = score * (Wbonus * 2);
+        score = score * (Wbonus * 2);
+        TotalScore = TotalScore + score;
     }
     if(wordplayed == 7){
         TotalScore = TotalScore + 50;
@@ -207,9 +211,11 @@ function updateScore(){
     //update ui
     var currentScore = document.getElementById("currentScore");
     currentScore.innerHTML = "Score: " + TotalScore;
-
+    
     var currentword = document.getElementById("currentWord");
             currentword.innerHTML = "Current Word: ";
+    
+    score=0;
     clearboard();
 }
 
