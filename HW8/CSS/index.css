@@ -1,0 +1,74 @@
+/***************************************************************************
+ File: https://dachaoda.github.io/GUI_Fall2020/HW8/index.css
+ 91.461 Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+ Dachao Kuang, UMass Lowell Computer Science, Dachao_Kuang@student.uml.edu
+ Copyright (c) 2020 by Dachao Kuang. All rights reserved. May be freely
+ copied or excerpted for educational purposes with credit to the author.
+ updated by DK on December 15, 2020 at 10:26 PM
+***************************************************************************/
+
+#scrabble_board {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+}
+
+#holder {
+    background-image: url("../graphics_data/scrabble-tile-holder-406774_640.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 600px;
+    padding-left: 90px;
+    padding-top: 60px;
+}
+
+.draggable_tile{
+    background-image: url("../graphics_data/Scrabble_Tiles/Scrabble_Tile_A.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 55px;
+    width: 55px;
+    float: left;
+}
+
+.holder_droppable{
+    height: 55px;
+    width: 55px;
+    background-color: green;
+    float: left;
+}
+
+.single_droppable{
+    height: 55px;
+    width: 55px;
+    background-color: tan;
+    float: left;
+    margin: 3px;
+}
+
+.bonus_droppable{
+    height: 55px;
+    width: 55px;
+    background-image: url("../graphics_data/double_word_point.PNG");
+    background-size: cover;
+    background-color: pink;
+    float: left;
+    margin: 3px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.letter_droppable{
+    height: 55px;
+    width: 55px;
+    background-image: url("../graphics_data/double_letter_point.PNG");
+    background-size: cover;
+    background-color: skyblue;
+    float: left;
+    margin: 3px;
+    font-weight: bold;
+    text-align: center;
+
+}
