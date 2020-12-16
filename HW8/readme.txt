@@ -11,8 +11,8 @@ Name: Dachao Kuang
 Assignment: HW8
 HW Extension Token Used: Two
 
-Site URL: https://dachaoda.github.io/GUI_Fall2020/HW7/index
-Github Repo: https://github.com/dachaoda/GUI_Fall2020/tree/main/HW7
+Site URL: https://dachaoda.github.io/GUI_Fall2020/HW8/index
+Github Repo: https://github.com/dachaoda/GUI_Fall2020/tree/main/HW8
 
 Features Fully Implemented:
     -Single line scrabble boards with two double word score bonus tiles and tow double double letter scores tiles.
