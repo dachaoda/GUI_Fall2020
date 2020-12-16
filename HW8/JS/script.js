@@ -207,6 +207,9 @@ function updateScore(){
     //update ui
     var currentScore = document.getElementById("currentScore");
     currentScore.innerHTML = "Score: " + TotalScore;
+
+    var currentword = document.getElementById("currentWord");
+            currentword.innerHTML = "Current Word: ";
     clearboard();
 }
 
